@@ -2,7 +2,8 @@ Exporting Course's Default View to CSV
 ======
 
 This determine_course_default_view.rb file in this folder can be used to
-generate a report of courses within an account of what their default view.
+generate a report of published courses with enrollments located within an
+account of what their default view.
 
 The default view is the type of page that users will see when they first 
 visit the course:
