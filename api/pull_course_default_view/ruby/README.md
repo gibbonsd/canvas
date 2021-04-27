@@ -9,10 +9,15 @@ The default view is the type of page that users will see when they first
 visit the course:
 
 'feed': Recent Activity Dashboard
+
 'wiki': Wiki Front Page
+
 'modules': Course Modules/Sections Page
+
 'assignments': Course Assignments List
+
 'syllabus': Course Syllabus Page
+
 
 The report will be generated in a CSV formatted file.
 
