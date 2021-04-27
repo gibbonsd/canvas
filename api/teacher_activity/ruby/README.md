@@ -4,8 +4,7 @@ Exporting Teacher Activity to CSV
 The `teacher_activity_to_csv.rb` file in this folder can be
 used to generate a report of all teacher interactions across
 all courses in an account. The report will be generated in a
-CSV formatted file and will include the following learning
-activities:
+CSV formatted file and will include the following activities:
 
 * All Discussions
 
