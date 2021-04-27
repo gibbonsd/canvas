@@ -12,7 +12,7 @@ activities:
 Requirements
 ======
 
-You will need to install [Ruby](http://ruby-lang.org) version 2.7.3.
+You will need to install [Ruby](https://www.ruby-lang.org/) version 2.7.3.
 
 Configuration
 ======
@@ -34,7 +34,7 @@ quotes.
 
 Canvas Domain:
 
-Optionally, find `$canvas_domain = ''` and place your Canvas
+Find `$canvas_domain = ''` and place your Canvas
 domain in the quotes.
 
 
