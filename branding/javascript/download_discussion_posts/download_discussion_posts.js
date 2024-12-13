@@ -6,7 +6,15 @@
  * of all the discussion posts
  */
 
-$(function(){
+  function onElementRendered(selector, cb, _attempts) {
+    var el = $(selector);
+    _attempts = ++_attempts || 1;
+    if (el.length) return cb(el);
+    if (_attempts == 60) return;
+    setTimeout(function() {
+      onElementRendered(selector, cb, _attempts);
+    }, 250);
+  };
 
   console.log("download_discussion_posts.js");
   console.log("  Checking if user is viewing a discussion...");
@@ -33,8 +41,10 @@ $(function(){
 
     var entries = [];
     //entries.push(new entry("ID", "Author", "Time", "Likes", "Text"));
-
-    $('.entry').each(function(i){
+    
+    onElementRendered('li.entry', function(e) {
+      
+      $('.entry').each(function(i){
 
       var id = Number($(this).prop("id").match(/\d+/));
       console.log("id:", id)
@@ -70,6 +80,9 @@ $(function(){
     csv = csv.join('\n')
     console.log(csv)
 
+    
+
+    
     function download(strData, strFileName, strMimeType) {
       var D = document,
         a = D.createElement("a");
@@ -111,8 +124,8 @@ $(function(){
       download(csv, fileName, encoding);
       console.log("  File sucessfully exported.");
     });
+      });
 
   } else {
     console.log("  User is not currently viewing a discussion, will not add 'export' button.");
   }
-});
